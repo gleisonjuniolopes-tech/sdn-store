@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09070f">
+  <meta name="description" content="SDN STORE — serviços e ofertas para a comunidade Blox Fruits. Confira o catálogo e fale com a equipe pelo Discord.">
+  <title>SDN STORE • Blox Fruits</title>
+  <style>
+    :root{--bg:#09070f;--panel:#151020;--panel2:#1d1530;--purple:#a855f7;--violet:#7c3aed;--white:#f8f7ff;--muted:#b9b1ca;--line:#302342;--gold:#f5c86b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#291346 0,transparent 38%),var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#09070fe8;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:950;letter-spacing:.4px;font-size:1.08rem}.brand span{color:var(--purple)}nav{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:.93rem}nav a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s;cursor:pointer}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--purple),var(--violet));box-shadow:0 8px 30px #7c3aed35}.secondary{border-color:#ffffff25;background:#ffffff08}.small{padding:10px 14px;font-size:.88rem}
+    .hero{padding:88px 0 76px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:45px;min-height:570px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #a855f755;background:#a855f714;color:#d9b6ff;padding:8px 12px;border-radius:999px;font-size:.82rem;font-weight:800}.dot{width:7px;height:7px;background:#b87aff;border-radius:50%;box-shadow:0 0 12px #b87aff}
+    h1{font-size:clamp(2.7rem,6vw,5.3rem);line-height:.98;letter-spacing:-.06em;margin:22px 0}.gradient{background:linear-gradient(90deg,#fff,#d5a7ff 55%,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:1.1rem;line-height:1.8;color:var(--muted);max-width:590px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.trust{display:flex;flex-wrap:wrap;gap:17px;margin-top:27px;color:#c8bfd7;font-size:.86rem}.trust span{display:flex;gap:7px;align-items:center}
+    .showcase{position:relative;min-height:360px;display:grid;place-items:center}.orb{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#a855f766 0,#7c3aed20 45%,transparent 70%);filter:blur(8px)}.game-card{position:relative;width:min(100%,360px);padding:27px;border-radius:25px;background:linear-gradient(145deg,#25183a,#100d18 70%);border:1px solid #ffffff20;box-shadow:0 25px 80px #0008;transform:rotate(2deg)}.game-icon{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,#b45bff,#5425a8);font-size:2rem;box-shadow:0 10px 30px #8b35df55}.game-card h3{font-size:1.45rem;margin:22px 0 7px}.game-card p{color:var(--muted);line-height:1.6;margin:0}.mini-row{display:flex;justify-content:space-between;gap:12px;margin-top:24px;padding-top:18px;border-top:1px solid #ffffff16;color:#d9c9f3;font-size:.86rem}.spark{position:absolute;color:var(--gold);font-size:2rem}.s1{top:30px;right:35px}.s2{bottom:35px;left:12px;font-size:1.4rem}
+    section{padding:72px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 35px}.kicker{color:#c28cff;font-size:.8rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{padding:24px;border-radius:20px;background:linear-gradient(160deg,#191126,#100d17);border:1px solid var(--line);transition:.2s}.product:hover{border-color:#a855f777;transform:translateY(-4px)}.product .emoji{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#a855f71c;font-size:1.6rem}.product h3{margin:19px 0 9px;font-size:1.15rem}.product p{color:var(--muted);line-height:1.65;min-height:54px;margin:0 0 20px}.product .link{color:#d9b6ff;font-weight:800;font-size:.93rem}
+    .banner{padding:35px;border:1px solid #a855f744;border-radius:24px;background:radial-gradient(ellipse at 100% 0%,#7c3aed35,transparent 55%),#151020;display:flex;align-items:center;justify-content:space-between;gap:25px}.banner h2{margin:0 0 10px;font-size:clamp(1.6rem,3vw,2.25rem)}.banner p{margin:0;color:var(--muted);line-height:1.65;max-width:650px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border-radius:18px;background:#ffffff05;border:1px solid #ffffff12}.num{font-size:.8rem;font-weight:900;color:#d7adff}.step h3{margin:12px 0 8px}.step p{color:var(--muted);line-height:1.65;margin:0}
+    footer{border-top:1px solid #ffffff12;padding:28px 0;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot strong{color:#fff}
+    @media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding:65px 0 45px;gap:15px}.showcase{min-height:310px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.banner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.product p{min-height:0}.hero{padding-top:48px}section{padding:54px 0}.game-card{padding:22px}.showcase{min-height:300px}.btn{width:100%}.actions{width:100%}.trust{gap:11px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">⚡ SDN <span>STORE</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#catalogo">Catálogo</a><a href="#como-comprar">Como comprar</a><a href="#comunidade">Comunidade</a>
+    </nav>
+    <a class="btn primary small" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Entrar no Discord ↗</a>
+  </div>
+</header>
+<main>
+  <section class="wrap hero" id="inicio">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> SUA CENTRAL DE Blox Fruits</div>
+      <h1>SUA EVOLUÇÃO<br><span class="gradient">COMEÇA AQUI.</span></h1>
+      <p class="lead">Explore os serviços da SDN STORE, tire suas dúvidas e encontre a opção ideal para sua jornada no Blox Fruits. Consulte a equipe no Discord para confirmar disponibilidade, valores e condições antes de fechar um pedido.</p>
+      <div class="actions">
+        <a class="btn primary" href="#catalogo">🔥 VER CATÁLOGO</a>
+        <a class="btn secondary" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">💬 ACESSAR O DISCORD</a>
+      </div>
+      <div class="trust"><span>✦ Atendimento pela comunidade</span><span>✦ Informações confirmadas pela equipe</span></div>
+    </div>
+    <div class="showcase" aria-label="Destaque visual SDN Store">
+      <div class="orb"></div><span class="spark s1">✦</span><span class="spark s2">✧</span>
+      <div class="game-card">
+        <div class="game-icon">⚡</div>
+        <h3>SDN STORE</h3>
+        <p>Seu próximo passo no Blox Fruits começa com informação clara e atendimento no Discord.</p>
+        <div class="mini-row"><span>✦ Catálogo</span><span>◈ Suporte</span><span>⚡ Comunidade</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Catálogo SDN</div><h2>Encontre o que procura</h2><p>Veja as categorias disponíveis e fale com a equipe para consultar os detalhes. Preços, estoque e prazos devem ser confirmados diretamente no Discord.</p></div>
+      <div class="grid">
+        <article class="product"><div class="emoji">🔥</div><h3>UP DE CONTA</h3><p>Consulte os serviços de evolução disponíveis para sua conta.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Consultar no Discord ↗</a></article>
+        <article class="product"><div class="emoji">⚡</div><h3>FARM</h3><p>Confira as opções de farm e os detalhes antes de solicitar.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Consultar no Discord ↗</a></article>
+        <article class="product"><div class="emoji">🍎</div><h3>FRUTAS E ITENS</h3><p>Consulte a disponibilidade atual de frutas e outros itens.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Consultar no Discord ↗</a></article>
+        <article class="product"><div class="emoji">🌊</div><h3>SERVIÇOS DE BLOX FRUITS</h3><p>Conheça os serviços oferecidos pela loja e suas condições.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Ver opções ↗</a></article>
+        <article class="product"><div class="emoji">⭐</div><h3>OFERTAS ESPECIAIS</h3><p>Consulte a equipe para saber quais ofertas estão ativas.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Ver ofertas ↗</a></article>
+        <article class="product"><div class="emoji">🎫</div><h3>SUPORTE E PEDIDOS</h3><p>Entre na comunidade para pedir ajuda e tirar dúvidas.</p><a class="link" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">Abrir atendimento ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-comprar">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Simples e direto</div><h2>Como fazer seu pedido</h2><p>Converse com a equipe antes de qualquer pagamento e confira todos os detalhes.</p></div>
+      <div class="steps">
+        <article class="step"><div class="num">PASSO 01</div><h3>Entre no Discord</h3><p>Acesse a comunidade pelo botão desta página e confira as informações e regras da loja.</p></article>
+        <article class="step"><div class="num">PASSO 02</div><h3>Consulte o serviço</h3><p>Pergunte sobre preço, disponibilidade, prazo e condições. Aguarde a confirmação da equipe.</p></article>
+        <article class="step"><div class="num">PASSO 03</div><h3>Confirme os detalhes</h3><p>Siga as instruções oficiais de atendimento e guarde os registros do seu pedido.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="comunidade">
+    <div class="wrap">
+      <div class="banner">
+        <div><h2>Faça parte da comunidade SDN ⚡</h2><p>Entre no Discord para receber atendimento, consultar o catálogo atualizado e conversar com a comunidade.</p></div>
+        <a class="btn primary" href="https://discord.gg/NWgvnVWpU4" target="_blank" rel="noopener noreferrer">ENTRAR NO DISCORD ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><div><strong>⚡ SDN STORE • BLOX FRUITS</strong><br>Comunidade, catálogo e atendimento.</div><div>Projeto comunitário não afiliado à Roblox ou aos criadores de Blox Fruits. Roblox e Blox Fruits são marcas de seus respectivos titulares.</div><div>© <span id="year"></span> SDN STORE</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
