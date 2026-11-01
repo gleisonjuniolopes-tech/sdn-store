@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #050816;
+  --panel: #0c1424;
+  --panel-alt: #121d34;
+  --line: rgba(148, 163, 184, 0.2);
+  --neon: #38bdf8;
+  --electric: #1d9bf0;
+  --text: #eaf3ff;
+  --muted: #9ab0d2;
+  --success: #2ae0a5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(29, 155, 240, 0.12), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/20 transition hover:brightness-110;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-sky-400/30 bg-white/5 px-5 py-3 font-semibold text-sky-100 transition hover:border-sky-300 hover:bg-sky-500/10;
+}
+
+.card {
+  @apply rounded-3xl border border-sky-400/15 bg-[#0d1529] shadow-[0_18px_55px_rgba(2,6,23,0.7)];
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-sky-200;
+}
+
+.input {
+  @apply w-full rounded-xl border border-sky-400/20 bg-[#0b1220] px-4 py-3 text-white outline-none transition focus:border-sky-300 focus:ring-2 focus:ring-sky-500/30;
+}
+
+.page-hero {
+  @apply py-16 md:py-20;
+}
